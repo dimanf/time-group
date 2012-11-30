@@ -49,12 +49,12 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PATH, 'files', 'media')
+MEDIA_ROOT = os.path.join(PATH, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = '/files/media/'
+MEDIA_URL = '/media/'
 
 FILEBROWSER_MEDIA_URL = '/static/'
 
@@ -62,15 +62,16 @@ FILEBROWSER_MEDIA_URL = '/static/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(PATH, 'files', 'static')
+STATIC_ROOT = os.path.join(PATH, 'static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
 # Additional locations of static files
-STATICFILES_DIRS = (os.path.join(PATH, 'static'),
-    os.path.join(PATH, 'files', 'media')
+STATICFILES_DIRS = (
+    os.path.join(PATH, 'media'),
+    # os.path.join(PATH, 'static'),   
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -128,8 +129,6 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:    
     'filebrowser',
     'django.contrib.admin',
-    'tg.timegroup',
-    'uploadify',    
     'tinymce',    
     'flatpages_tinymce',        
     # Uncomment the next line to enable admin documentation:
@@ -181,7 +180,7 @@ TINYMCE_DEFAULT_CONFIG={
     'theme' : "advanced",    
     'language' : 'ru',            
     'theme_advanced_buttons1' : "styleselect,formatselect,fontselect,fontsizeselect",    
-    'theme_advanced_buttons2' : "bullist,numlist,|,link,unlink,anchor,image|,bold,italic,underline,|,forecolor,backcolor,|,cut,copy,paste,pastetext,pasteword,|,undo,redo,|,link,unlink,cleanup",
+    'theme_advanced_buttons2' : "bullist,numlist,|,link,unlink,anchor,image,|,bold,italic,underline,|,forecolor,backcolor,|,cut,copy,paste,pastetext,pasteword,|,undo,redo,|,link,unlink,cleanup",
     'theme_advanced_toolbar_location' : "top",
     'theme_advanced_toolbar_align' : "left",
     'theme_advanced_statusbar_location' : "bottom",

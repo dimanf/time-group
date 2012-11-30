@@ -4,7 +4,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',	
+urlpatterns = patterns('',    
     (r'^admin/filebrowser/', include('filebrowser.urls')),
     (r'^tinymce/', include('tinymce.urls')),		
     # Examples:
