@@ -178,9 +178,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 TINYMCE_DEFAULT_CONFIG={
     'theme' : "advanced",    
-    'language' : 'ru',            
-    'theme_advanced_buttons1' : "styleselect,formatselect,fontselect,fontsizeselect",    
-    'theme_advanced_buttons2' : "bullist,numlist,|,link,unlink,anchor,image,|,bold,italic,underline,|,forecolor,backcolor,|,cut,copy,paste,pastetext,pasteword,|,undo,redo,|,link,unlink,cleanup",
+    'language' : 'ru',
+    'plugins' : "paste",                
+    'theme_advanced_buttons1' : "styleselect,formatselect,fontselect,fontsizeselect,|,justifyleft,justifycenter,justifyright,justifyfull",    
+    'theme_advanced_buttons2' : "pasteword,bullist,numlist,|,link,unlink,anchor,image,|,bold,italic,underline,|,forecolor,backcolor,|,cut,copy,paste,pastetext,pasteword,|,undo,redo,|,link,unlink,cleanup,code,",
     'theme_advanced_toolbar_location' : "top",
     'theme_advanced_toolbar_align' : "left",
     'theme_advanced_statusbar_location' : "bottom",
